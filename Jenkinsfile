@@ -25,7 +25,7 @@ pipeline {
         stage('Build & Test') {
             steps {
                 echo 'Execution des tests RobotFramework via Maven...'
-                    bat 'robot -d results MINI_PROJET_RBF/'
+                    bat 'robot -d results C:\dev\RobotFrameWork\MINI_PROJET_RBF\tests/'
             }
         }
 
@@ -34,7 +34,7 @@ pipeline {
     post {
 
         always {
-        bat 'curl -H "Content-Type: text/xml" -X POST -H "Authorization: Bearer %TOKEN%"  --data @"results/output.xml" https://xray.cloud.getxray.app/api/v1/import/execution/robot?projectKey=POEI25'
+        bat 'curl -H "Content-Type: text/xml" -X POST -H "Authorization: Bearer %TOKEN%"  --data @"results/output.xml" https://xray.cloud.getxray.app/api/v1/import/execution/robot?projectKey=POEI2'
         }
 
         success {
