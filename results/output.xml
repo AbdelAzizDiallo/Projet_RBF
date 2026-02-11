@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.12 on win32)" generated="2026-02-11T09:39:52.838278" rpa="false" schemaversion="5">
+<suite id="s1" name="MINI PROJET RBF" source="C:\dev\RobotFrameWork\MINI_PROJET_RBF">
+<suite id="s1-s1" name="TEST SCRIPT" source="C:\dev\RobotFrameWork\MINI_PROJET_RBF\TEST_SCRIPT">
+<suite id="s1-s1-s1" name="ConnexionSteps" source="C:\dev\RobotFrameWork\MINI_PROJET_RBF\TEST_SCRIPT\ConnexionSteps.robot">
+<test id="s1-s1-s1-t1" name="test connexion" line="13">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-02-11T09:39:53.040066" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${monURL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-11T09:39:53.039663" elapsed="0.921092"/>
+</kw>
+<kw name="connexion_reussie" owner="Connexion">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-11T09:39:53.961957" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>${L_inputId}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-11T09:39:53.961565" elapsed="0.080901"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-11T09:39:54.042990" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>${L_inputPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-11T09:39:54.042669" elapsed="0.057601"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-11T09:39:54.100773" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>${L_loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-11T09:39:54.100462" elapsed="0.065504"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-02-11T09:39:54.170326" level="INFO">Current location is 'https://www.saucedemo.com/inventory.html'.</msg>
+<arg>https://www.saucedemo.com/inventory.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-02-11T09:39:54.166170" elapsed="0.004449"/>
+</kw>
+<arg>${inputId}</arg>
+<arg>${inputPassword}</arg>
+<status status="PASS" start="2026-02-11T09:39:53.961171" elapsed="0.209577"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-11T09:39:54.171113" elapsed="2.106877"/>
+</kw>
+<status status="PASS" start="2026-02-11T09:39:53.035925" elapsed="3.242894"/>
+</test>
+<status status="PASS" start="2026-02-11T09:39:52.871521" elapsed="3.418081"/>
+</suite>
+<status status="PASS" start="2026-02-11T09:39:52.868756" elapsed="3.426238"/>
+</suite>
+<status status="PASS" start="2026-02-11T09:39:52.841566" elapsed="3.458409"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="MINI PROJET RBF" id="s1" pass="1" fail="0" skip="0">MINI PROJET RBF</stat>
+<stat name="TEST SCRIPT" id="s1-s1" pass="1" fail="0" skip="0">MINI PROJET RBF.TEST SCRIPT</stat>
+<stat name="ConnexionSteps" id="s1-s1-s1" pass="1" fail="0" skip="0">MINI PROJET RBF.TEST SCRIPT.ConnexionSteps</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-02-11T09:39:53.013199" level="ERROR">Error in file 'C:\dev\RobotFrameWork\MINI_PROJET_RBF\TEST_SCRIPT\ConnexionSteps.robot' on line 7: Setting 'Test Setup' is not allowed in resource file.</msg>
+<msg time="2026-02-11T09:39:53.017012" level="ERROR">Error in file 'C:\dev\RobotFrameWork\MINI_PROJET_RBF\TEST_SCRIPT\ConnexionSteps.robot' on line 8: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg time="2026-02-11T09:39:53.019361" level="ERROR">Error in file 'C:\dev\RobotFrameWork\MINI_PROJET_RBF\TEST_DATA\ConnexionVariables.robot' on line 5: Error in file 'C:\dev\RobotFrameWork\MINI_PROJET_RBF\TEST_SCRIPT\ConnexionSteps.robot' on line 12: Resource file with 'Test Cases' section is invalid.</msg>
+<msg time="2026-02-11T09:39:53.022222" level="ERROR">Error in file 'C:\dev\RobotFrameWork\MINI_PROJET_RBF\TEST_SCRIPT\ConnexionSteps.robot' on line 7: Setting 'Test Setup' is not allowed in resource file.</msg>
+<msg time="2026-02-11T09:39:53.023928" level="ERROR">Error in file 'C:\dev\RobotFrameWork\MINI_PROJET_RBF\TEST_SCRIPT\ConnexionSteps.robot' on line 8: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg time="2026-02-11T09:39:53.025751" level="ERROR">Error in file 'C:\dev\RobotFrameWork\MINI_PROJET_RBF\PAGE_OBJECT\Connexion.robot' on line 6: Error in file 'C:\dev\RobotFrameWork\MINI_PROJET_RBF\TEST_SCRIPT\ConnexionSteps.robot' on line 12: Resource file with 'Test Cases' section is invalid.</msg>
+</errors>
+</robot>
