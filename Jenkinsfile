@@ -25,7 +25,7 @@ pipeline {
         stage('Build & Test') {
             steps {
                 echo 'Execution des tests RobotFramework via Maven...'
-                    bat 'robot -d results C:\dev\RobotFrameWork\MINI_PROJET_RBF\tests/'
+                    bat 'robot -d results C:/dev/RobotFrameWork/MINI_PROJET_RBF/tests/'
             }
         }
 
